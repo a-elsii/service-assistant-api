@@ -1,10 +1,17 @@
 <?php
 namespace serviceAssistant;
 
-use serviceAssistant\Helper\serviceAssistantApiHelper;
+use serviceAssistant\helper\serviceAssistantApiHelper;
+use serviceAssistant\extraServices\serviceAssistantApiCurrency;
+use serviceAssistant\extraServices\serviceAssistantApiFile;
+use serviceAssistant\extraServices\serviceAssistantApiTodo;
 
 class serviceAssistantApi
 {
+    use serviceAssistantApiFile;
+    use serviceAssistantApiCurrency;
+    use serviceAssistantApiTodo;
+
     const URL_GET_API_HASH = 'auth/get-api-key';
     const URL_TRANSLATE = 'translate';
     const URL_WEATHER = 'weather';

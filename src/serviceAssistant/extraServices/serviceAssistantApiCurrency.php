@@ -1,21 +1,21 @@
 <?php
-namespace serviceAssistant;
+namespace serviceAssistant\extraServices;
 
-use serviceAssistant\Helper\serviceAssistantApiHelper;
+use serviceAssistant\helper\serviceAssistantApiHelper;
 
-class serviceAssistantApiCurrency extends serviceAssistantApi
+trait serviceAssistantApiCurrency
 {
-    const URL_GET_ALL = 'currency-rate';
-    const URL_CRYPTO = 'currency-rate/crypto';
+    protected $urlGetAllCurrencyRate = 'currency-rate';
+    protected $urlCrypto = 'currency-rate/crypto';
 
     /**
      * Function for get all items
      *
      * @return array|false|mixed
      */
-    public function getAll()
+    public function getAllCurrencyRate()
     {
-        return $this->serviceAssistant->sendRequest(self::URL_GET_ALL);
+        return $this->serviceAssistant->sendRequest($this->urlGetAllCurrencyRate);
     }
 
     /**
@@ -30,7 +30,7 @@ class serviceAssistantApiCurrency extends serviceAssistantApi
         string $fiat
     )
     {
-        return $this->serviceAssistant->sendRequest(self::URL_CRYPTO, [
+        return $this->serviceAssistant->sendRequest($this->urlCrypto, [
             'crypto' => $crypto,
             'fiat' => $fiat,
         ], serviceAssistantApiHelper::API_METHOD_POST);

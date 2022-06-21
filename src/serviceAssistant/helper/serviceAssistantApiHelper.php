@@ -1,5 +1,5 @@
 <?php
-namespace serviceAssistant\Helper;
+namespace serviceAssistant\helper;
 
 class serviceAssistantApiHelper
 {
