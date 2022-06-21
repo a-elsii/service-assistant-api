@@ -11,3 +11,8 @@ Either run
 ```
 composer require aelsii/service-assistant-api
 ```
+
+For get update
+```
+composer update aelsii/service-assistant-api
+```
