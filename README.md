@@ -11,4 +11,3 @@ Either run
 ```
 composer require aelsii/service-assistant-api
 ```
-
