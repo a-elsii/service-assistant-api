@@ -87,9 +87,7 @@ class serviceAssistantApi
      * @param string $search
      * @return array|false|mixed
      */
-    public function googleSearch(
-        string $search
-    )
+    public function googleSearch(string $search)
     {
         return $this->serviceAssistant->sendRequest(self::URL_SEARCH, [
             'search' => $search,
@@ -114,7 +112,7 @@ class serviceAssistantApi
         array  $params = [],
         string $method = 'GET',
         array  $headers = []
-    ): mixed
+    )
     {
         return $this->serviceAssistant->sendRequest($url, $params, $method, $headers);
     }

@@ -4,7 +4,7 @@ wp-config.php
 /wp-content/uploads
 /vendor/*
 composer.lock
-/test
+/tests
 # netbeans project files
 #nbproject
 
