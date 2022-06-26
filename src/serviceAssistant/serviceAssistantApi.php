@@ -17,6 +17,9 @@ class serviceAssistantApi
     const URL_WEATHER = 'weather';
     const URL_SEARCH = 'search';
 
+    const DEFAULT_FROM_LANGUAGE = 'ru';
+    const DEFAULT_TO_LANGUAGE = 'en';
+
     /** @var serviceAssistantApiHelper $serviceAssistant */
     protected $serviceAssistant;
     public function __construct(
@@ -59,8 +62,8 @@ class serviceAssistantApi
      */
     public function translate(
         string $text,
-        string $fromLanguage = '',
-        string $toLanguage = ''
+        string $fromLanguage = self::DEFAULT_FROM_LANGUAGE,
+        string $toLanguage = self::DEFAULT_TO_LANGUAGE
     )
     {
         return $this->serviceAssistant->sendRequest(self::URL_TRANSLATE, [
