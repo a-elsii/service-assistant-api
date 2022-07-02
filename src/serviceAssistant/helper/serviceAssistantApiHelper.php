@@ -61,12 +61,14 @@ class serviceAssistantApiHelper
             $headers[] = 'Accepts: application/json';
 
         $curl_data = [
-            CURLOPT_URL => $path,            // set the request URL
+            CURLOPT_URL => $path,               // set the request URL
             CURLOPT_HTTPHEADER => $headers,     // set the headers
-            CURLOPT_RETURNTRANSFER => 1,         // ask for raw response instead of bool
+            CURLOPT_SSL_VERIFYHOST => false,    // verify the certificate's name against host
+            CURLOPT_SSL_VERIFYPEER => false,    // Disabled SSL Cert checks
+            CURLOPT_RETURNTRANSFER => 1,        // ask for raw response instead of bool
             CURLOPT_COOKIESESSION => 1,         // ask for raw response instead of bool
-            CURLOPT_CONNECTTIMEOUT => 15,         // ask for raw response instead of bool
-            CURLOPT_TIMEOUT => 15,         // ask for raw response instead of bool
+            CURLOPT_CONNECTTIMEOUT => 15,       // ask for raw response instead of bool
+            CURLOPT_TIMEOUT => 15,              // ask for raw response instead of bool
         ];
 
         // If we have method post we use it
