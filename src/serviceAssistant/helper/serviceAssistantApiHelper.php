@@ -84,7 +84,10 @@ class serviceAssistantApiHelper
         curl_close($curl); // Close request
 
         if (!$response)
-            return false;
+            return [
+                'error' => 'response empty',
+                'params' => $params
+            ];
 
         $data = json_decode($response, true);
 
