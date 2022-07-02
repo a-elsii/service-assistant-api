@@ -16,4 +16,3 @@ For get update
 ```
 composer update aelsii/service-assistant-api
 ```
-
