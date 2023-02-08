@@ -5,12 +5,14 @@ use serviceAssistant\helper\serviceAssistantApiHelper;
 use serviceAssistant\extraServices\serviceAssistantApiCurrency;
 use serviceAssistant\extraServices\serviceAssistantApiFile;
 use serviceAssistant\extraServices\serviceAssistantApiTodo;
+use serviceAssistant\extraServices\serviceAssistantApiIpInfo;
 
 class serviceAssistantApi
 {
     use serviceAssistantApiFile;
     use serviceAssistantApiCurrency;
     use serviceAssistantApiTodo;
+    use serviceAssistantApiIpInfo;
 
     const URL_GET_API_HASH = 'auth/get-api-key';
     const URL_TRANSLATE = 'translate';
