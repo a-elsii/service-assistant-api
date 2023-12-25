@@ -6,6 +6,7 @@ use serviceAssistant\extraServices\serviceAssistantApiCurrency;
 use serviceAssistant\extraServices\serviceAssistantApiFile;
 use serviceAssistant\extraServices\serviceAssistantApiTodo;
 use serviceAssistant\extraServices\serviceAssistantApiIpInfo;
+use serviceAssistant\extraServices\serviceAssistantApiSendTelegramMessage;
 
 class serviceAssistantApi
 {
@@ -13,6 +14,7 @@ class serviceAssistantApi
     use serviceAssistantApiCurrency;
     use serviceAssistantApiTodo;
     use serviceAssistantApiIpInfo;
+    use serviceAssistantApiSendTelegramMessage;
 
     const URL_GET_API_HASH = 'auth/get-api-key';
     const URL_TRANSLATE = 'translate';
