@@ -22,4 +22,3 @@ trait serviceAssistantApiSendTelegramMessage
         return $this->serviceAssistant->sendRequest($this->urlSendMessage, $params, serviceAssistantApiHelper::API_METHOD_POST);
     }
 }
-
